@@ -1,0 +1,381 @@
+/**
+ * YT Admin Notes Board - Styles
+ *
+ * @package YT_Admin_Notes_Board
+ * @version 1.0.0
+ */
+
+/* Dashboard widget container */
+.yt-anb-widget {
+	padding: 0;
+}
+
+/* Editor area */
+.yt-anb-editor {
+	margin-bottom: 15px;
+}
+
+.yt-anb-textarea {
+	width: 100%;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-size: 13px;
+	line-height: 1.6;
+	padding: 10px;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+	resize: vertical;
+	min-height: 150px;
+}
+
+.yt-anb-textarea:focus {
+	border-color: #2271b1;
+	outline: none;
+	box-shadow: 0 0 0 1px #2271b1;
+}
+
+/* TinyMCE adjustments */
+.yt-anb-widget .wp-editor-container {
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+}
+
+.yt-anb-widget .quicktags-toolbar {
+	border-bottom: 1px solid #dcdcde;
+}
+
+/* Actions bar */
+.yt-anb-actions {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 15px;
+	padding-top: 10px;
+}
+
+#yt-anb-save {
+	flex-shrink: 0;
+}
+
+#yt-anb-clear {
+	flex-shrink: 0;
+}
+
+/* Message display */
+.yt-anb-message {
+	display: inline-flex;
+	align-items: center;
+	padding: 6px 12px;
+	border-radius: 4px;
+	font-size: 13px;
+	font-weight: 500;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.yt-anb-message.yt-anb-message-success {
+	background: #d4edda;
+	color: #155724;
+	border: 1px solid #c3e6cb;
+	opacity: 1;
+}
+
+.yt-anb-message.yt-anb-message-error {
+	background: #f8d7da;
+	color: #721c24;
+	border: 1px solid #f5c6cb;
+	opacity: 1;
+}
+
+.yt-anb-message.yt-anb-message-info {
+	background: #d1ecf1;
+	color: #0c5460;
+	border: 1px solid #bee5eb;
+	opacity: 1;
+}
+
+/* Meta information */
+.yt-anb-meta {
+	padding-top: 12px;
+	margin-top: 12px;
+	border-top: 1px solid #f0f0f1;
+	font-size: 12px;
+	color: #646970;
+	font-style: italic;
+}
+
+.yt-anb-meta strong {
+	color: #1d2327;
+	font-weight: 600;
+}
+
+.yt-anb-time {
+	white-space: nowrap;
+}
+
+/* View mode (read-only) */
+.yt-anb-view {
+	padding: 10px;
+	background: #f6f7f7;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+	min-height: 100px;
+	line-height: 1.6;
+}
+
+.yt-anb-view p {
+	margin: 0 0 10px;
+}
+
+.yt-anb-view p:last-child {
+	margin-bottom: 0;
+}
+
+.yt-anb-view ul,
+.yt-anb-view ol {
+	margin: 0 0 10px 20px;
+	padding: 0;
+}
+
+.yt-anb-view li {
+	margin-bottom: 5px;
+}
+
+.yt-anb-view a {
+	color: #2271b1;
+	text-decoration: underline;
+}
+
+.yt-anb-view a:hover {
+	color: #135e96;
+}
+
+/* Empty state */
+.yt-anb-empty {
+	text-align: center;
+	padding: 30px 20px;
+	color: #646970;
+	font-style: italic;
+	margin: 0;
+}
+
+/* Loading state */
+.yt-anb-loading {
+	position: relative;
+	opacity: 0.6;
+	pointer-events: none;
+}
+
+.yt-anb-loading::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 20px;
+	height: 20px;
+	margin: -10px 0 0 -10px;
+	border: 2px solid #f3f3f3;
+	border-top: 2px solid #2271b1;
+	border-radius: 50%;
+	animation: yt-anb-spin 0.8s linear infinite;
+}
+
+@keyframes yt-anb-spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/* Button states */
+button:disabled {
+	cursor: not-allowed;
+	opacity: 0.5;
+}
+
+#yt-anb-save:hover:not(:disabled) {
+	background: #135e96;
+	border-color: #135e96;
+}
+
+#yt-anb-clear {
+	background: #fff;
+	border-color: #d63638;
+	color: #d63638;
+}
+
+#yt-anb-clear:hover:not(:disabled) {
+	background: #d63638;
+	border-color: #d63638;
+	color: #fff;
+}
+
+/* Dashboard widget specific */
+#yt_anb_dashboard_widget .inside {
+	margin: 0;
+	padding: 12px;
+}
+
+#yt_anb_dashboard_widget .yt-anb-widget {
+	font-size: 13px;
+}
+
+/* Settings page specific */
+.yt-anb-info-box {
+	background: #fff;
+	border: 1px solid #ccd0d4;
+	padding: 20px;
+	margin-top: 20px;
+	border-radius: 4px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.yt-anb-info-box h2 {
+	margin-top: 0;
+	font-size: 18px;
+	border-bottom: 2px solid #2271b1;
+	padding-bottom: 10px;
+}
+
+.yt-anb-info-box h3 {
+	margin-top: 20px;
+	font-size: 15px;
+	color: #2271b1;
+}
+
+.yt-anb-info-box ul {
+	margin-left: 20px;
+	line-height: 1.8;
+}
+
+.yt-anb-info-box li {
+	margin-bottom: 5px;
+}
+
+/* Responsive design */
+@media screen and (max-width: 782px) {
+	.yt-anb-actions {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	#yt-anb-save,
+	#yt-anb-clear {
+		width: 100%;
+	}
+
+	.yt-anb-message {
+		width: 100%;
+		text-align: center;
+		justify-content: center;
+	}
+
+	.yt-anb-textarea {
+		font-size: 16px;
+		/* Prevent zoom on iOS */
+	}
+}
+
+/* Accessibility */
+button:focus {
+	outline: 2px solid #2271b1;
+	outline-offset: 2px;
+}
+
+.yt-anb-textarea:focus {
+	outline: 2px solid #2271b1;
+	outline-offset: -2px;
+}
+
+/* Print styles */
+@media print {
+
+	.yt-anb-actions,
+	#yt-anb-save,
+	#yt-anb-clear {
+		display: none !important;
+	}
+
+	.yt-anb-widget {
+		border: 1px solid #000;
+		padding: 10px;
+	}
+
+	.yt-anb-view {
+		background: #fff;
+		color: #000;
+		border: none;
+	}
+}
+
+/* Animation for message fade in/out */
+@keyframes yt-anb-fade-in {
+	from {
+		opacity: 0;
+		transform: translateY(-5px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.yt-anb-message.yt-anb-message-success,
+.yt-anb-message.yt-anb-message-error,
+.yt-anb-message.yt-anb-message-info {
+	animation: yt-anb-fade-in 0.3s ease-out;
+}
+
+/* Widget header customization */
+#yt_anb_dashboard_widget .hndle {
+	cursor: default;
+}
+
+#yt_anb_dashboard_widget .handle-actions {
+	display: none;
+}
+
+/* Rich text content styling */
+.yt-anb-view strong {
+	font-weight: 600;
+}
+
+.yt-anb-view em {
+	font-style: italic;
+}
+
+.yt-anb-view code {
+	background: #f0f0f1;
+	padding: 2px 6px;
+	border-radius: 3px;
+	font-family: Monaco, Consolas, monospace;
+	font-size: 12px;
+}
+
+.yt-anb-view blockquote {
+	margin: 10px 0;
+	padding: 10px 15px;
+	border-left: 3px solid #2271b1;
+	background: #f6f7f7;
+	font-style: italic;
+}
+
+/* Success animation */
+@keyframes yt-anb-success-pulse {
+
+	0%,
+	100% {
+		background-color: #d4edda;
+	}
+
+	50% {
+		background-color: #b9e5c4;
+	}
+}
+
+.yt-anb-message.yt-anb-message-success.yt-anb-pulse {
+	animation: yt-anb-success-pulse 0.5s ease-out;
+}
