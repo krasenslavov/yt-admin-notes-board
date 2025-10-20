@@ -16,21 +16,21 @@
 }
 
 .yt-anb-textarea {
-	width: 100%;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 13px;
 	line-height: 1.6;
-	padding: 10px;
-	border: 1px solid #dcdcde;
-	border-radius: 4px;
-	resize: vertical;
 	min-height: 150px;
+	padding: 10px;
+	resize: vertical;
+	width: 100%;
 }
 
 .yt-anb-textarea:focus {
 	border-color: #2271b1;
-	outline: none;
 	box-shadow: 0 0 0 1px #2271b1;
+	outline: none;
 }
 
 /* TinyMCE adjustments */
@@ -45,8 +45,8 @@
 
 /* Actions bar */
 .yt-anb-actions {
-	display: flex;
 	align-items: center;
+	display: flex;
 	gap: 10px;
 	margin-bottom: 15px;
 	padding-top: 10px;
@@ -62,45 +62,45 @@
 
 /* Message display */
 .yt-anb-message {
-	display: inline-flex;
 	align-items: center;
-	padding: 6px 12px;
 	border-radius: 4px;
+	display: inline-flex;
 	font-size: 13px;
 	font-weight: 500;
 	opacity: 0;
+	padding: 6px 12px;
 	transition: opacity 0.3s ease;
 }
 
 .yt-anb-message.yt-anb-message-success {
 	background: #d4edda;
-	color: #155724;
 	border: 1px solid #c3e6cb;
+	color: #155724;
 	opacity: 1;
 }
 
 .yt-anb-message.yt-anb-message-error {
 	background: #f8d7da;
-	color: #721c24;
 	border: 1px solid #f5c6cb;
+	color: #721c24;
 	opacity: 1;
 }
 
 .yt-anb-message.yt-anb-message-info {
 	background: #d1ecf1;
-	color: #0c5460;
 	border: 1px solid #bee5eb;
+	color: #0c5460;
 	opacity: 1;
 }
 
 /* Meta information */
 .yt-anb-meta {
-	padding-top: 12px;
-	margin-top: 12px;
 	border-top: 1px solid #f0f0f1;
-	font-size: 12px;
 	color: #646970;
+	font-size: 12px;
 	font-style: italic;
+	margin-top: 12px;
+	padding-top: 12px;
 }
 
 .yt-anb-meta strong {
@@ -114,12 +114,12 @@
 
 /* View mode (read-only) */
 .yt-anb-view {
-	padding: 10px;
 	background: #f6f7f7;
 	border: 1px solid #dcdcde;
 	border-radius: 4px;
-	min-height: 100px;
 	line-height: 1.6;
+	min-height: 100px;
+	padding: 10px;
 }
 
 .yt-anb-view p {
@@ -151,32 +151,32 @@
 
 /* Empty state */
 .yt-anb-empty {
-	text-align: center;
-	padding: 30px 20px;
 	color: #646970;
 	font-style: italic;
 	margin: 0;
+	padding: 30px 20px;
+	text-align: center;
 }
 
 /* Loading state */
 .yt-anb-loading {
-	position: relative;
 	opacity: 0.6;
 	pointer-events: none;
+	position: relative;
 }
 
 .yt-anb-loading::after {
+	animation: yt-anb-spin 0.8s linear infinite;
+	border: 2px solid #f3f3f3;
+	border-radius: 50%;
+	border-top: 2px solid #2271b1;
 	content: '';
+	height: 20px;
+	left: 50%;
+	margin: -10px 0 0 -10px;
 	position: absolute;
 	top: 50%;
-	left: 50%;
 	width: 20px;
-	height: 20px;
-	margin: -10px 0 0 -10px;
-	border: 2px solid #f3f3f3;
-	border-top: 2px solid #2271b1;
-	border-radius: 50%;
-	animation: yt-anb-spin 0.8s linear infinite;
 }
 
 @keyframes yt-anb-spin {
@@ -226,28 +226,28 @@ button:disabled {
 .yt-anb-info-box {
 	background: #fff;
 	border: 1px solid #ccd0d4;
-	padding: 20px;
-	margin-top: 20px;
 	border-radius: 4px;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+	margin-top: 20px;
+	padding: 20px;
 }
 
 .yt-anb-info-box h2 {
-	margin-top: 0;
-	font-size: 18px;
 	border-bottom: 2px solid #2271b1;
+	font-size: 18px;
+	margin-top: 0;
 	padding-bottom: 10px;
 }
 
 .yt-anb-info-box h3 {
-	margin-top: 20px;
-	font-size: 15px;
 	color: #2271b1;
+	font-size: 15px;
+	margin-top: 20px;
 }
 
 .yt-anb-info-box ul {
-	margin-left: 20px;
 	line-height: 1.8;
+	margin-left: 20px;
 }
 
 .yt-anb-info-box li {
@@ -257,8 +257,8 @@ button:disabled {
 /* Responsive design */
 @media screen and (max-width: 782px) {
 	.yt-anb-actions {
-		flex-direction: column;
 		align-items: stretch;
+		flex-direction: column;
 	}
 
 	#yt-anb-save,
@@ -267,9 +267,9 @@ button:disabled {
 	}
 
 	.yt-anb-message {
-		width: 100%;
-		text-align: center;
 		justify-content: center;
+		text-align: center;
+		width: 100%;
 	}
 
 	.yt-anb-textarea {
@@ -305,8 +305,8 @@ button:focus {
 
 	.yt-anb-view {
 		background: #fff;
-		color: #000;
 		border: none;
+		color: #000;
 	}
 }
 
@@ -349,18 +349,18 @@ button:focus {
 
 .yt-anb-view code {
 	background: #f0f0f1;
-	padding: 2px 6px;
 	border-radius: 3px;
 	font-family: Monaco, Consolas, monospace;
 	font-size: 12px;
+	padding: 2px 6px;
 }
 
 .yt-anb-view blockquote {
+	background: #f6f7f7;
+	border-left: 3px solid #2271b1;
+	font-style: italic;
 	margin: 10px 0;
 	padding: 10px 15px;
-	border-left: 3px solid #2271b1;
-	background: #f6f7f7;
-	font-style: italic;
 }
 
 /* Success animation */

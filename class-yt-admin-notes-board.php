@@ -3,7 +3,7 @@
  * Plugin Name: YT Admin Notes Board
  * Plugin URI: https://github.com/krasenslavov/yt-admin-notes-board
  * Description: A shared notes board for admin and editor collaboration. Add team notes, task lists, and important reminders right in your WordPress dashboard.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Requires at least: 5.8
  * Requires PHP: 7.4
  * Author: Krasen Slavov
